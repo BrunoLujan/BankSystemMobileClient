@@ -1,0 +1,65 @@
+object LoginForm: TLoginForm
+  Left = 0
+  Top = 0
+  Caption = 'Iniciar sesi'#243'n'
+  ClientHeight = 299
+  ClientWidth = 635
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LoginButton: TButton
+    Position.X = 272.000000000000000000
+    Position.Y = 192.000000000000000000
+    TabOrder = 2
+    Text = 'Iniciar sesi'#243'n'
+    OnClick = LoginButtonClick
+  end
+  object EmailTF: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 200.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label2: TLabel
+    Position.X = 200.000000000000000000
+    Position.Y = 80.000000000000000000
+    Text = 'Correo Electr'#243'nico'
+    TabOrder = 3
+  end
+  object PasswordTF: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    Position.X = 200.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label3: TLabel
+    Position.X = 200.000000000000000000
+    Position.Y = 120.000000000000000000
+    Text = 'Contrase'#241'a'
+    TabOrder = 4
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = claRed
+    Size.Width = 635.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Label1: TLabel
+      StyledSettings = [Family, Style]
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.FontColor = claWhite
+      Text = 'Bank System'
+      TabOrder = 0
+    end
+  end
+end
