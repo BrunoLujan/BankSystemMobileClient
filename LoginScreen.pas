@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit, Account, RegularExpressions,
-  Enums, FMX.Objects;
+  Enums, FMX.Objects, CheckAccount;
 
 type
   TLoginForm = class(TForm)
@@ -34,6 +34,7 @@ implementation
 procedure TLoginForm.LoginButtonClick(Sender: TObject);
 var
   account: TAccount;
+  checkAccountForm : TCheckAccountForm;
 begin
   if (EmailTF.Text = '') or (PasswordTF.Text = '') then
   begin
@@ -51,9 +52,9 @@ begin
     TAccount.Current := account;
     if account.Role = ROLE_TYPE.CLIENT then
     begin
-      {createTransactionForm := TCreateTransactionSetCardNumberForm.Create(nil);
-      createTransactionForm.ShowModal;
-      createTransactionForm.Release;}
+      checkAccountForm := TCheckAccountForm.Create(nil);
+      checkAccountForm.ShowModal;
+      checkAccountForm.Release;
       ShowMessage('Login successful');
     end
     else

@@ -8,12 +8,14 @@ uses
   Cards in 'Models\Cards.pas',
   Transaction in 'Models\Transaction.pas',
   HttpRest in 'Network\HttpRest.pas',
-  Enums in 'Enums.pas';
+  Enums in 'Enums.pas',
+  CheckAccount in 'CheckAccount.pas' {Form2};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TLoginForm, LoginForm);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.

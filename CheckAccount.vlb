@@ -1,0 +1,16 @@
+﻿[Rectangle1]
+Coordinates=75,188,80,36
+
+[Panel1]
+Coordinates=10,190,55,36
+
+[Label2]
+Coordinates=135,10,53,58
+
+[Label1]
+Coordinates=198,10,53,58
+
+[]
+Coordinates=10,10,115,168
+Visible=True
+
