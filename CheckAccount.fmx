@@ -7,6 +7,7 @@ object CheckAccountForm: TCheckAccountForm
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object Rectangle1: TRectangle
     Align = Top
@@ -28,14 +29,14 @@ object CheckAccountForm: TCheckAccountForm
     end
   end
   object Panel1: TPanel
-    Position.X = 16.000000000000000000
+    Align = Horizontal
     Position.Y = 72.000000000000000000
-    Size.Width = 497.000000000000000000
+    Size.Width = 532.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 1
+    TabOrder = 2
     object Label2: TLabel
-      Position.X = 224.000000000000000000
+      Align = Center
       Size.Width = 57.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
@@ -49,19 +50,63 @@ object CheckAccountForm: TCheckAccountForm
     Size.Width = 169.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
+    TabOrder = 3
     Text = 'Check account statement'
   end
-  object ListView1: TListView
-    ItemAppearanceClassName = 'TListItemAppearance'
-    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
-    HeaderAppearanceClassName = 'TListHeaderObjects'
-    FooterAppearanceClassName = 'TListHeaderObjects'
-    Position.X = 16.000000000000000000
-    Position.Y = 96.000000000000000000
-    Size.Width = 497.000000000000000000
-    Size.Height = 177.000000000000000000
+  object CardsListBox: TListBox
+    Align = Horizontal
+    Position.Y = 120.000000000000000000
+    Size.Width = 532.000000000000000000
+    Size.Height = 153.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 3
+    TabOrder = 4
+    Columns = 3
+    DisableFocusEffect = True
+    Items.Strings = (
+      'a'
+      's'
+      'd')
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 528.000000000000000000
+    Viewport.Height = 149.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Horizontal
+    Position.Y = 96.000000000000000000
+    Size.Width = 532.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label3: TLabel
+      Align = Left
+      AutoSize = True
+      Size.Width = 177.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Tipo'
+      TabOrder = 0
+    end
+    object Label4: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 177.000000000000000000
+      Size.Width = 176.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'N'#250'mero de tarjeta'
+      TabOrder = 1
+    end
+    object Label5: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 353.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Saldo'
+      TabOrder = 2
+    end
   end
 end

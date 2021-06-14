@@ -16,6 +16,5 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TLoginForm, LoginForm);
-  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.

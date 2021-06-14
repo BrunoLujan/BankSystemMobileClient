@@ -1,0 +1,19 @@
+inherited CheckAccountForm_LgXhdpiTb: TCheckAccountForm_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 0
+  inherited Rectangle1: TRectangle
+    Size.Width = 480.000000000000000000
+  end
+  inherited Panel1: TPanel
+    Size.Width = 480.000000000000000000
+  end
+  inherited CardsListBox: TListBox
+    Size.Width = 480.000000000000000000
+    Viewport.Width = 480.000000000000000000
+    Viewport.Height = 153.000000000000000000
+  end
+  inherited Panel2: TPanel
+    Size.Width = 480.000000000000000000
+  end
+end

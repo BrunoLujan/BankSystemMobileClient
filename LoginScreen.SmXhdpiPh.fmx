@@ -1,0 +1,28 @@
+inherited LoginForm_SmXhdpiPh: TLoginForm_SmXhdpiPh
+  ClientHeight = 375
+  ClientWidth = 250
+  DesignerMasterStyle = 0
+  inherited LoginButton: TButton
+    Position.Y = 148.000000000000000000
+    Size.Width = 250.000000000000000000
+  end
+  inherited EmailTF: TEdit
+    Size.Width = 250.000000000000000000
+    Size.Height = 32.000000000000000000
+  end
+  inherited Label2: TLabel
+    Size.Width = 250.000000000000000000
+  end
+  inherited PasswordTF: TEdit
+    Position.Y = 116.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 32.000000000000000000
+  end
+  inherited Label3: TLabel
+    Position.Y = 99.000000000000000000
+    Size.Width = 250.000000000000000000
+  end
+  inherited Rectangle1: TRectangle
+    Size.Width = 250.000000000000000000
+  end
+end

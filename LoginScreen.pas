@@ -30,6 +30,7 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.SmXhdpiPh.fmx ANDROID}
 
 procedure TLoginForm.LoginButtonClick(Sender: TObject);
 var
@@ -55,7 +56,6 @@ begin
       checkAccountForm := TCheckAccountForm.Create(nil);
       checkAccountForm.ShowModal;
       checkAccountForm.Release;
-      ShowMessage('Login successful');
     end
     else
       ShowMessage('Acceso exclusivo para clientes.');

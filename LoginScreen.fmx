@@ -2,47 +2,56 @@ object LoginForm: TLoginForm
   Left = 0
   Top = 0
   Caption = 'Iniciar sesi'#243'n'
-  ClientHeight = 299
+  ClientHeight = 252
   ClientWidth = 635
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object LoginButton: TButton
-    Position.X = 272.000000000000000000
-    Position.Y = 192.000000000000000000
+    Align = Top
+    Position.Y = 128.000000000000000000
+    Size.Width = 635.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 2
     Text = 'Iniciar sesi'#243'n'
     OnClick = LoginButtonClick
   end
   object EmailTF: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
     TabOrder = 0
-    Position.X = 200.000000000000000000
-    Position.Y = 96.000000000000000000
-    Size.Width = 233.000000000000000000
+    Position.Y = 67.000000000000000000
+    Size.Width = 635.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
   end
   object Label2: TLabel
-    Position.X = 200.000000000000000000
-    Position.Y = 80.000000000000000000
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 635.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
     Text = 'Correo Electr'#243'nico'
     TabOrder = 3
   end
   object PasswordTF: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
     TabOrder = 1
     Password = True
-    Position.X = 200.000000000000000000
-    Position.Y = 136.000000000000000000
-    Size.Width = 233.000000000000000000
+    Position.Y = 106.000000000000000000
+    Size.Width = 635.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
   end
   object Label3: TLabel
-    Position.X = 200.000000000000000000
-    Position.Y = 120.000000000000000000
+    Align = Top
+    Position.Y = 89.000000000000000000
+    Size.Width = 635.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
     Text = 'Contrase'#241'a'
     TabOrder = 4
   end
