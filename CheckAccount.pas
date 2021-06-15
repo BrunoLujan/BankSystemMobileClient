@@ -26,7 +26,7 @@ type
   private
     { Private declarations }
   public
-    { Public declarations }
+    cards: TCardArray;
   end;
 
 var
@@ -41,7 +41,6 @@ implementation
 
 procedure TCheckAccountForm.FormShow(Sender: TObject);
 var
-  cards: TCardArray;
   card: TCard;
 begin
   cards := TAccount.GetCards(TAccount.Current.Id.ToString);
@@ -63,6 +62,10 @@ begin
   end;
 
 procedure TCheckAccountForm.CheckAccountStatementButtonClick(Sender: TObject);
+var
+  CheckAccountStatementForm: TCheckAccountStatementForm;
+  cardIndex: integer;
+  index: integer;
 begin
    if CardsListBox.ItemIndex = -1 then
    begin
@@ -71,7 +74,15 @@ begin
    end
    else
    begin
-    CheckAccountStatementForm := TCheckAccountStatementForm.Create(Application, cards[CardsListBox.ItemIndex]);
+    index := CardsListBox.ItemIndex + 1;
+    cardIndex := index MOD 3;
+    if cardIndex <> 0 then
+      cardIndex := Trunc(index / 3) + 1
+    else
+      cardIndex := integer(Round(index / 3));
+    CheckAccountStatementForm := TCheckAccountStatementForm.Create(
+      Application, cards[cardIndex - 1]
+    );
     CheckAccountStatementForm.ShowModal;
     CheckAccountStatementForm.Release;
    end;

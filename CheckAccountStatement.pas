@@ -32,6 +32,7 @@ type
     Label10: TLabel;
     MonthCombobox: TComboBox;
     YearTF: TEdit;
+    Panel5: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure CheckAccountStatementButtonClick(Sender: TObject);
   private
@@ -105,9 +106,7 @@ begin
         CardsListBox.Items.Add(DateTimeToStr(transactionAux.CreatedAt));
         CardsListBox.Items.Add(transactionAux.Concept);
         if transactionAux.TypeT = TRANSACTION_TYPE.TRANSFER_OF_FUNDS then
-          begin
-            CardsListBox.Items.Add('Transferencia de fondos');
-          end
+          CardsListBox.Items.Add('Transferencia de fondos')
         else if transactionAux.TypeT = TRANSACTION_TYPE.DEPOSIT then
           CardsListBox.Items.Add('Deposito')
         else if transactionAux.TypeT = TRANSACTION_TYPE.WITHDRAWAL  then
@@ -116,6 +115,8 @@ begin
           CardsListBox.Items.Add('Pago')
         else if transactionAux.TypeT = TRANSACTION_TYPE.MONTHLY_PAYMENT   then
           CardsListBox.Items.Add('Pago mensual');
+        CardsListBox.Items.Add(transactionAux.Reference);
+        CardsListBox.Items.Add(transactionAux.Amount.ToString);
       end;
       CardsListBox .Items.EndUpdate;
     except

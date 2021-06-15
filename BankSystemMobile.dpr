@@ -18,6 +18,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TLoginForm, LoginForm);
   Application.CreateForm(TCheckAccountForm, CheckAccountForm);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TCheckAccountStatementForm, CheckAccountStatementForm);
   Application.Run;
 end.

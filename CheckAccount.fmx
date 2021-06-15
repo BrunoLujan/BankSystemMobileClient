@@ -93,8 +93,8 @@ object CheckAccountForm: TCheckAccountForm
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 528.000000000000000000
-    Viewport.Height = 149.000000000000000000
+    Viewport.Width = 532.000000000000000000
+    Viewport.Height = 153.000000000000000000
   end
   object CheckAccountStatementButton: TButton
     Position.X = 360.000000000000000000

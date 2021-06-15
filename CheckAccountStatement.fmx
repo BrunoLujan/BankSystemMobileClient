@@ -29,19 +29,9 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
       TabOrder = 0
     end
   end
-  object CheckAccountStatementButton: TButton
-    Position.X = 360.000000000000000000
-    Position.Y = 175.000000000000000000
-    Size.Width = 169.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 7
-    Text = 'Consultar estado de cuenta'
-    OnClick = CheckAccountStatementButtonClick
-  end
   object Panel2: TPanel
-    Align = Horizontal
-    Position.Y = 232.000000000000000000
+    Align = Top
+    Position.Y = 215.000000000000000000
     Size.Width = 529.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -97,8 +87,8 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
     end
   end
   object Panel1: TPanel
-    Align = Horizontal
-    Position.Y = 208.000000000000000000
+    Align = Top
+    Position.Y = 190.000000000000000000
     Size.Width = 529.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -113,8 +103,8 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
     end
   end
   object CardsListBox: TListBox
-    Align = Horizontal
-    Position.Y = 256.000000000000000000
+    Align = Top
+    Position.Y = 240.000000000000000000
     Size.Width = 529.000000000000000000
     Size.Height = 153.000000000000000000
     Size.PlatformDefault = False
@@ -128,8 +118,8 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
     Viewport.Height = 149.000000000000000000
   end
   object Panel3: TPanel
-    Align = Horizontal
-    Position.Y = 56.000000000000000000
+    Align = Top
+    Position.Y = 50.000000000000000000
     Size.Width = 529.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -144,18 +134,19 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
     end
   end
   object Panel4: TPanel
-    Position.Y = 80.000000000000000000
+    Align = Top
+    Position.Y = 75.000000000000000000
     Size.Width = 529.000000000000000000
     Size.Height = 65.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 8
+    TabOrder = 7
     object CardTypeLabel: TLabel
       Position.X = 8.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 89.000000000000000000
+      Size.Width = 161.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      Text = 'carttypelabel'
+      Text = 'cardtypelabel'
       TabOrder = 0
     end
     object CardNumberLabel: TLabel
@@ -178,42 +169,58 @@ object CheckAccountStatementForm: TCheckAccountStatementForm
     end
   end
   object Label10: TLabel
-    Position.X = 8.000000000000000000
-    Position.Y = 152.000000000000000000
-    Size.Width = 201.000000000000000000
+    Align = Top
+    Position.Y = 140.000000000000000000
+    Size.Width = 529.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Seleccione el mes y escriba un a'#241'o:'
+    TabOrder = 8
+  end
+  object Panel5: TPanel
+    Align = Top
+    Position.Y = 157.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 9
-  end
-  object MonthCombobox: TComboBox
-    Items.Strings = (
-      'Enero'
-      'Febrero'
-      'Marzo'
-      'Abril'
-      'Mayo'
-      'Junio'
-      'Julio'
-      'Agosto'
-      'Septiembre'
-      'Octubre'
-      'Noviembre'
-      'Diciembre')
-    Position.X = 8.000000000000000000
-    Position.Y = 176.000000000000000000
-    Size.Width = 169.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 10
-  end
-  object YearTF: TEdit
-    Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 11
-    Position.X = 200.000000000000000000
-    Position.Y = 176.000000000000000000
-    Size.Width = 137.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
+    object MonthCombobox: TComboBox
+      Items.Strings = (
+        'Enero'
+        'Febrero'
+        'Marzo'
+        'Abril'
+        'Mayo'
+        'Junio'
+        'Julio'
+        'Agosto'
+        'Septiembre'
+        'Octubre'
+        'Noviembre'
+        'Diciembre')
+      Size.Width = 169.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object YearTF: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 200.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object CheckAccountStatementButton: TButton
+      Position.X = 360.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Consultar estado de cuenta'
+      OnClick = CheckAccountStatementButtonClick
+    end
   end
 end
