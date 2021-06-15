@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.ListView.Types,
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView,
-  FMX.Layouts, FMX.ListBox, Account, Cards;
+  FMX.Layouts, FMX.ListBox, Account, Cards, CheckAccountStatement;
 
 type
   TCheckAccountForm = class(TForm)
@@ -22,6 +22,7 @@ type
     Label5: TLabel;
     Panel2: TPanel;
     procedure FormShow(Sender: TObject);
+    procedure CheckAccountStatementButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,4 +61,20 @@ begin
     end;
     end;
   end;
+
+procedure TCheckAccountForm.CheckAccountStatementButtonClick(Sender: TObject);
+begin
+   if CardsListBox.ItemIndex = -1 then
+   begin
+    ShowMessage('Seleccione una tarjeta de la tabla.');
+    exit;
+   end
+   else
+   begin
+    CheckAccountStatementForm := TCheckAccountStatementForm.Create(Application, cards[CardsListBox.ItemIndex]);
+    CheckAccountStatementForm.ShowModal;
+    CheckAccountStatementForm.Release;
+   end;
+end;
+
 end.

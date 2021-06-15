@@ -17,6 +17,15 @@ type
       _interestRate: double;
       _surchargeRate: double;
     public
+      property CardId: integer read _cardId write _cardId;
+      property TypeT: TRANSACTION_TYPE read _type write _type;
+      property CreatedAt: TDateTime read _createdAt;
+      property Amount: double read _amount write _amount;
+      property Reference: string read _reference;
+      property Concept: string read _concept;
+      property InterestRate: double read _interestRate;
+      property SurchargeRate: double read _surchargeRate;
+
       constructor Create(
         const cardId: integer;
         const transactionType: TRANSACTION_TYPE;
@@ -29,6 +38,8 @@ type
       );
       procedure Save;
   end;
+
+  TTransactionArray = array of TTransaction;
 
 implementation
 

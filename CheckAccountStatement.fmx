@@ -1,0 +1,219 @@
+object CheckAccountStatementForm: TCheckAccountStatementForm
+  Left = 0
+  Top = 0
+  Caption = 'CheckAccountStatementForm'
+  ClientHeight = 415
+  ClientWidth = 529
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = claRed
+    Size.Width = 529.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Label1: TLabel
+      StyledSettings = [Family, Style]
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.FontColor = claWhite
+      Text = 'Bank System'
+      TabOrder = 0
+    end
+  end
+  object CheckAccountStatementButton: TButton
+    Position.X = 360.000000000000000000
+    Position.Y = 175.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Consultar estado de cuenta'
+    OnClick = CheckAccountStatementButtonClick
+  end
+  object Panel2: TPanel
+    Align = Horizontal
+    Position.Y = 232.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label3: TLabel
+      Align = Left
+      AutoSize = True
+      Size.Width = 105.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Fecha y hora'
+      TabOrder = 0
+    end
+    object Label4: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 105.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Concepto'
+      TabOrder = 1
+    end
+    object Label5: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 217.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Tipo'
+      TabOrder = 4
+    end
+    object Label7: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 329.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Referencia'
+      TabOrder = 3
+    end
+    object Label8: TLabel
+      Align = Left
+      AutoSize = True
+      Position.X = 433.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Monto'
+      TabOrder = 2
+    end
+  end
+  object Panel1: TPanel
+    Align = Horizontal
+    Position.Y = 208.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Label2: TLabel
+      Align = Center
+      Size.Width = 98.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Estado de cuenta'
+      TabOrder = 0
+    end
+  end
+  object CardsListBox: TListBox
+    Align = Horizontal
+    Position.Y = 256.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 153.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Columns = 5
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 525.000000000000000000
+    Viewport.Height = 149.000000000000000000
+  end
+  object Panel3: TPanel
+    Align = Horizontal
+    Position.Y = 56.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label9: TLabel
+      Align = Center
+      Size.Width = 44.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Cuenta'
+      TabOrder = 0
+    end
+  end
+  object Panel4: TPanel
+    Position.Y = 80.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    object CardTypeLabel: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'carttypelabel'
+      TabOrder = 0
+    end
+    object CardNumberLabel: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Text = '0000000000000000'
+      TabOrder = 1
+    end
+    object AmountTypeLabel: TLabel
+      Position.X = 400.000000000000000000
+      Position.Y = 8.000000000000000000
+      Text = 'amounttype'
+      TabOrder = 2
+    end
+    object CardAmountLabel: TLabel
+      Position.X = 400.000000000000000000
+      Position.Y = 32.000000000000000000
+      Text = '0000000000000000'
+      TabOrder = 3
+    end
+  end
+  object Label10: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Seleccione el mes y escriba un a'#241'o:'
+    TabOrder = 9
+  end
+  object MonthCombobox: TComboBox
+    Items.Strings = (
+      'Enero'
+      'Febrero'
+      'Marzo'
+      'Abril'
+      'Mayo'
+      'Junio'
+      'Julio'
+      'Agosto'
+      'Septiembre'
+      'Octubre'
+      'Noviembre'
+      'Diciembre')
+    Position.X = 8.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+  end
+  object YearTF: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    Position.X = 200.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

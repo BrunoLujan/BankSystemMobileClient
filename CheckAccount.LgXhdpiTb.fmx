@@ -8,12 +8,12 @@ inherited CheckAccountForm_LgXhdpiTb: TCheckAccountForm_LgXhdpiTb
   inherited Panel1: TPanel
     Size.Width = 480.000000000000000000
   end
+  inherited Panel2: TPanel
+    Size.Width = 480.000000000000000000
+  end
   inherited CardsListBox: TListBox
     Size.Width = 480.000000000000000000
     Viewport.Width = 480.000000000000000000
     Viewport.Height = 153.000000000000000000
-  end
-  inherited Panel2: TPanel
-    Size.Width = 480.000000000000000000
   end
 end

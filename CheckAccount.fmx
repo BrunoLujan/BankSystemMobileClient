@@ -44,34 +44,6 @@ object CheckAccountForm: TCheckAccountForm
       TabOrder = 0
     end
   end
-  object CheckAccountStatementButton: TButton
-    Position.X = 344.000000000000000000
-    Position.Y = 280.000000000000000000
-    Size.Width = 169.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 3
-    Text = 'Check account statement'
-  end
-  object CardsListBox: TListBox
-    Align = Horizontal
-    Position.Y = 120.000000000000000000
-    Size.Width = 532.000000000000000000
-    Size.Height = 153.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 4
-    Columns = 3
-    DisableFocusEffect = True
-    Items.Strings = (
-      'a'
-      's'
-      'd')
-    DefaultItemStyles.ItemStyle = ''
-    DefaultItemStyles.GroupHeaderStyle = ''
-    DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 528.000000000000000000
-    Viewport.Height = 149.000000000000000000
-  end
   object Panel2: TPanel
     Align = Horizontal
     Position.Y = 96.000000000000000000
@@ -108,5 +80,30 @@ object CheckAccountForm: TCheckAccountForm
       Text = 'Saldo'
       TabOrder = 2
     end
+  end
+  object CardsListBox: TListBox
+    Align = Horizontal
+    Position.Y = 120.000000000000000000
+    Size.Width = 532.000000000000000000
+    Size.Height = 153.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Columns = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 528.000000000000000000
+    Viewport.Height = 149.000000000000000000
+  end
+  object CheckAccountStatementButton: TButton
+    Position.X = 360.000000000000000000
+    Position.Y = 287.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Consultar estado de cuenta'
+    OnClick = CheckAccountStatementButtonClick
   end
 end

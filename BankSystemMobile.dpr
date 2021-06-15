@@ -9,12 +9,15 @@ uses
   Transaction in 'Models\Transaction.pas',
   HttpRest in 'Network\HttpRest.pas',
   Enums in 'Enums.pas',
-  CheckAccount in 'CheckAccount.pas' {Form2};
+  CheckAccount in 'CheckAccount.pas' {Form2},
+  CheckAccountStatement in 'CheckAccountStatement.pas' {Form3};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TLoginForm, LoginForm);
+  Application.CreateForm(TCheckAccountForm, CheckAccountForm);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.

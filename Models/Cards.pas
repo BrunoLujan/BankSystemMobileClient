@@ -3,7 +3,7 @@ unit Cards;
 interface
 
 uses
-  Enums, HttpRest, System.Classes, System.SysUtils, System.JSON;
+  Enums, HttpRest, System.Classes, System.SysUtils, System.JSON, Transaction;
 
 type
   TCard = class abstract
@@ -22,6 +22,7 @@ type
       property ExpirationDate: TDate read _expirationDate;
       property CreatedAt: TDateTime read _createdAt;
       class function GetByCardNumber(const cardNumber: string): TCard;
+      class function GetCardTransactionsByDate(const cardId: integer; const year: string; const month: integer): TTransactionArray;
   end;
 
   TCardArray = array of TCard;
@@ -113,6 +114,34 @@ begin
       CARD_STATUS(request.Data.FindValue('status').Value.ToInteger),
       request.Data.FindValue('balance').Value.ToDouble
     );
+end;
+
+class function TCard.GetCardTransactionsByDate(const cardId: integer; const year: string; const month: integer): TTransactionArray;
+var
+  dataArray: TJSONArray;
+  transactions: TTransactionArray;
+  request: THttpResponse;
+  format: TFormatSettings;
+  i : integer;
+begin
+  request := THttpRest.SendGet('/card/' + cardId.ToString + '/transaction/date/' + year + '/' + month.ToString + '/get');
+  format := TFormatSettings.Create;
+  format.ShortDateFormat := 'yyyy-mm-dd';
+  format.DateSeparator := '-';
+  dataArray := request.Data as TJSONArray;
+  SetLength(transactions, dataArray.Count);
+  for i := 0 to dataArray.Count - 1 do
+  begin
+    transactions[i] := TTransaction.Create(
+      dataArray.Items[i].FindValue('destinationCardId').Value.ToInteger,
+      TRANSACTION_TYPE(dataArray.Items[i].FindValue('type').Value.ToInteger),
+      StrToDateTime(dataArray.Items[i].FindValue('createdAt').Value, format),
+      dataArray.Items[i].FindValue('amount').Value.ToDouble,
+      dataArray.Items[i].FindValue('reference').Value,
+      dataArray.Items[i].FindValue('concept').Value, 0.0, 0.0
+    );
+  end;
+    Result := transactions;
 end;
 
 constructor TDebitCard.Create(

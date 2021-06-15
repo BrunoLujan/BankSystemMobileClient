@@ -11,18 +11,12 @@ inherited CheckAccountForm_NmXhdpiPh: TCheckAccountForm_NmXhdpiPh
       Size.Width = 400.000000000000000000
     end
   end
-  inherited CheckAccountStatementButton: TButton
-    Align = Horizontal
-    Position.Y = 312.000000000000000000
+  inherited Panel2: TPanel
     Size.Width = 400.000000000000000000
-    Size.Height = 31.000000000000000000
   end
   inherited CardsListBox: TListBox
     Size.Width = 400.000000000000000000
     Viewport.Width = 400.000000000000000000
     Viewport.Height = 153.000000000000000000
-  end
-  inherited Panel2: TPanel
-    Size.Width = 400.000000000000000000
   end
 end

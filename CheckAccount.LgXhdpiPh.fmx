@@ -16,20 +16,6 @@ inherited CheckAccountForm_LgXhdpiPh: TCheckAccountForm_LgXhdpiPh
       TextSettings.HorzAlign = Center
     end
   end
-  inherited CheckAccountStatementButton: TButton
-    Align = Top
-    Position.Y = 253.000000000000000000
-    Size.Width = 450.000000000000000000
-    Size.Height = 41.000000000000000000
-  end
-  inherited CardsListBox: TListBox
-    Align = Top
-    Position.Y = 100.000000000000000000
-    Size.Width = 450.000000000000000000
-    Items.Strings = ()
-    Viewport.Width = 450.000000000000000000
-    Viewport.Height = 153.000000000000000000
-  end
   inherited Panel2: TPanel
     Align = Top
     Position.Y = 75.000000000000000000
@@ -46,5 +32,10 @@ inherited CheckAccountForm_LgXhdpiPh: TCheckAccountForm_LgXhdpiPh
       Position.X = 304.000000000000000000
       Size.Width = 146.000000000000000000
     end
+  end
+  inherited CardsListBox: TListBox
+    Size.Width = 450.000000000000000000
+    Viewport.Width = 450.000000000000000000
+    Viewport.Height = 153.000000000000000000
   end
 end
